@@ -23,7 +23,7 @@ public class CreateAccountPagePO {
     public static WebElement PassWordField;
     @FindBy(id = "password-confirmation")
     public static WebElement PassWordConfirmation;
-    @FindBy(className = "Create an Account")
+    @FindBy(css = "#form-validate > div > div.primary > button > span")
     public static WebElement CreateAnAccountButton;
 
 
