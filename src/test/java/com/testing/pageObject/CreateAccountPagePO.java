@@ -55,6 +55,31 @@ public class CreateAccountPagePO {
     }
 
 
+    // Element Locator
+    @FindBy(id ="<input name=\"login[username]")
+    public static WebElement EmailField;
+
+
+    // Element Locator
+    @FindBy(name ="login[password]")
+    public static WebElement PasswordField;
+
+    // Initialize WebElement Using Selenium
+    public SigneInPagePO(WebDriver driver){
+        PageFactory.initElements(driver, this);
+    }
+    // Method to describe web element action
+    public void SignInLink(){
+        SignInLink.click();
+    }
+
+
+
+
+
+
+
+
 
 
 

@@ -38,4 +38,24 @@ public class AccountManagementSteps {
     @Then("My account page is displayed")
     public void myAccountPageIsDisplayed() {
     }
-}
+
+
+
+
+
+
+    public class AccountManagementSteps {
+        WebDriver driver = Hooks.driver;
+        @Given("I am on sign in page")
+        public void iAmOnSignInPage() {
+            HomePagePO homePagePO = new HomePagePO(driver);
+            homePagePO.clickSignInLink();
+
+            @When(I enter {string} {string}){
+            public void iEnter (String Email, string Password);
+                SignInPagePO signInPagePO = new SignInPagePO(driver);
+        }
+
+
+
+

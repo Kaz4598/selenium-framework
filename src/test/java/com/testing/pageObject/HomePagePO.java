@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePagePO {
 
     // Element Locator
-    @FindBy(linkText = "Create an Account")
-    public static WebElement CreateAccountLink;
+    @FindBy(linkText = "SignIn")
+    public static WebElement SignInLink;
 
     @FindBy(linkText = "Sign In")
     public static WebElement SignInLink;
@@ -23,8 +23,8 @@ public class HomePagePO {
 
 
     // Method to describe web element action
-    public void clickCreateAccountLink(){
-        CreateAccountLink.click();
+    public void SignInLink(){
+        SignInLink.click();
     }
 
     public void clickSignInLink(){
