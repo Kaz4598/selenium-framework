@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccountManagementSteps {
     WebDriver driver = Hooks.driver;
+
     @Given("I am on create an account page")
     public void iAmOnCreateAnAccountPage() {
         HomePagePO homePagePO = new HomePagePO(driver);
@@ -20,7 +21,7 @@ public class AccountManagementSteps {
     }
 
     @When("I enter {string} {string} {string} {string} {string}")
-    public void iEnter(String Firstname, String  Lastname, String Email, String Password, String ConfirmPassword) {
+    public void iEnter(String Firstname, String Lastname, String Email, String Password, String ConfirmPassword) {
         CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
         createAccountPagePO.enterFirstName(Firstname);
         createAccountPagePO.enterLastName(Lastname);
@@ -40,21 +41,22 @@ public class AccountManagementSteps {
     }
 
 
+    @Given("I am on signIn page")
+    public void iAmOnSignInPage() {
+    }
 
+    @When("I enter {string} {string}")
+    public void iEnter(String arg0, String arg1) {
+    }
 
+    @And("I click on sign in")
+    public void iClickOnSignIn() {
+    }
 
-
-    public class AccountManagementSteps {
-        WebDriver driver = Hooks.driver;
-        @Given("I am on sign in page")
-        public void iAmOnSignInPage() {
-            HomePagePO homePagePO = new HomePagePO(driver);
-            homePagePO.clickSignInLink();
-
-            @When(I enter {string} {string}){
-            public void iEnter (String Email, string Password);
-                SignInPagePO signInPagePO = new SignInPagePO(driver);
-        }
+    @Then("My registered customer account page is displayed")
+    public void myRegisteredCustomerAccountPageIsDisplayed() {
+    }
+}
 
 
 

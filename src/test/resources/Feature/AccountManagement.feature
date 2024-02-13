@@ -14,8 +14,7 @@ Feature: Account Management
       | Ara       | Zee      | Ara@gmail.com | Arazee99@20 | Arazee99@20     |
 
 
-  @AccountManagement
-  Feature: Account Management
+
 
   @SignIn
   Scenario Outline: Create registered customer login using a valid email address
@@ -23,7 +22,6 @@ Feature: Account Management
     When I enter "<Email>" "<Password>"
     And I click on sign in
     Then My registered customer account page is displayed
-
 
     Examples:
       | Email          | Password      |
