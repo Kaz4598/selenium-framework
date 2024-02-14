@@ -3,6 +3,7 @@ package com.testing.stepDefinition;
 import com.testing.cucumber.Hooks;
 import com.testing.pageObject.CreateAccountPagePO;
 import com.testing.pageObject.HomePagePO;
+import com.testing.pageObject.SigneInPagePO;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -43,14 +44,24 @@ public class AccountManagementSteps {
 
     @Given("I am on signIn page")
     public void iAmOnSignInPage() {
+        HomePagePO homePagePO = new HomePagePO(driver);
+        HomePagePO.SignInLink();
+
     }
 
     @When("I enter {string} {string}")
-    public void iEnter(String arg0, String arg1) {
+    public void iEnter(String Email, String Password) {
+        SigneInPagePO signeInPagePO = new SigneInPagePO(driver);
+        SigneInPagePO.EmailField (Email);
+        SigneInPagePO.PasswordField (Password);
+
     }
 
     @And("I click on sign in")
     public void iClickOnSignIn() {
+        SigneInPagePO signeInPagePO = new SigneInPagePO(driver);
+        SigneInPagePO.SignInButton();
+
     }
 
     @Then("My registered customer account page is displayed")

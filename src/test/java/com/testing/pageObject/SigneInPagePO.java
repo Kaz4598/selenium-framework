@@ -21,7 +21,9 @@ public class SigneInPagePO {
 
     // Initialize WebElement Using Selenium
     public SigneInPagePO(WebDriver driver){
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, this);}
+
+    public static void PasswordField(String password) {
     }
 
     // Method to describe web element action
